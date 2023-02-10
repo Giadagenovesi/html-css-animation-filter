@@ -84,11 +84,31 @@
     filter: sepia(1);
 }
 .ex-10-icon {
-    font-size: 60px;
-    
+    font-size: 60px; 
+    animation: spin infinite linear 1s;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(1turn);
+    }
 }
 .ex-11-icon {
     font-size: 60px;
+    transition: all;
+}
+.ex-11-icon:hover{
+    animation: half-spin 2s linear;
+}
+@keyframes half-spin {
+    0% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(330deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
 }
 .ex-12-button, .ex-13-button {
     position: relative;
